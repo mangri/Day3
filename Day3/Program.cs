@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.VisualBasic;
 
 namespace Day3
 {
@@ -19,7 +20,7 @@ namespace Day3
 
             string vardas = "M";
             Console.WriteLine("String to int " + Convert.ToInt32(vardas));
-            */
+            
             Console.WriteLine("Uzduotis 1");
             char a = Convert.ToChar(Console.ReadLine());
             char b = Convert.ToChar(Console.ReadLine());
@@ -64,6 +65,69 @@ namespace Day3
             string userPass = "admin";
             Console.WriteLine("Please enter your username");
             
+            Console.WriteLine("Please enter number of members");
+            string membersInput = Console.ReadLine();
+            int countReal;
+            bool convertTrue = int.TryParse(membersInput, out countReal);
+            if (convertTrue == false)
+            { Console.WriteLine("blogai");
+            Environment.Exit(0);   }
+            else if (countReal == 1)
+                { Console.WriteLine("solo"); }
+            else { Console.WriteLine("bye bye"); }
+            
+            Console.WriteLine("Enter please your C sharp studying hours");
+            int goodToGo;
+            string theInput = Console.ReadLine();
+            bool convertHours = int.TryParse(theInput, out goodToGo);
+            if (convertHours==false)
+            {
+                Console.WriteLine("Did you use alcohol today? Incorrect input!");
+                Environment.Exit(0);
+            }
+            else if (goodToGo==160)
+            {
+                Console.WriteLine("Good, a full period achieved");
+            }
+            else if (goodToGo < 160)
+            {
+                Console.WriteLine("Paycut, go back to work, " + (160-goodToGo) + " hours missing");
+            }
+            else if (goodToGo > 160)
+            {
+                Console.WriteLine("You can rest, " + (goodToGo - 160) + " hours on top");
+            }
+            */
+            Console.WriteLine("What's your mark?");
+            int correctMark;
+            string theInput = Console.ReadLine();
+            bool maybe = int.TryParse(theInput, out correctMark);
+            if (maybe == true)
+            {
+                switch (correctMark)
+                {
+                    case <= 4 and >=0:
+                        Console.WriteLine("Nepatenkinamai");
+                        break;
+                    case 5:
+                        Console.WriteLine("Silpnai");
+                        break;
+                    case 6:
+                        Console.WriteLine("Patenkinamai");
+                        break;
+                    case >7 and <=10:
+                        Console.WriteLine("Islaikei");
+                        break;
+                    case >10 :
+                        Console.WriteLine("Meluoji");
+                        break;
+                }
+            }
+            else if (maybe == false)
+            {
+                Console.WriteLine("Bloga klaviatura, arba blogai ivedei");
+            }
+
 
 
 
