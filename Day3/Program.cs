@@ -7,12 +7,12 @@ namespace Day3
     {
         static void Main(string[] args)
         {
-            double number = Math.PI/3.14;
+            /*float number = 3.197f;
           
-            Console.WriteLine("Decimal places {0:0.000000}", number);
+            Console.WriteLine("Decimal places {0:0.00}", number);
             
             
-            /*double x = 12.55;
+            double x = 12.55;
             
             int a;
             a = (int)x;
@@ -42,7 +42,7 @@ namespace Day3
             Console.WriteLine("Koks rutulio diametras?");
             double d = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Rutulio plotas yra " + 4*pi*(d/2)*(d/2) + " kvadratiniu vienetu");
-            Console.WriteLine("Rutulio turis yra " + (4/3) * pi * Math.Pow((d / 2),3) + " kubiniu vienetu");
+            Console.WriteLine("Rutulio turis yra " + Math.Round((4/3) * pi * Math.Pow((d / 2),3),2) + " kubiniu vienetu");
 
             Console.WriteLine("Uzduotis 4");
             Console.WriteLine("Ivesk pirma skaiciu");
@@ -61,14 +61,26 @@ namespace Day3
             //int default_=0;
             //string input = Console.ReadLine()
             //bool convert = int.TryParse(input, out default_);
-
+            */
 
             Console.WriteLine("Uzduotis Login");
+            int = 0;
+            int countBadName = 0;
+            int countBadPass = 0;
             string userName = "admin";
             string userPass = "admin";
-            Console.WriteLine("Please enter your username");
             
-            Console.WriteLine("Please enter number of members");
+            while (i<3)
+            {
+                Console.WriteLine("Please enter your username");
+                string inputName = Console.ReadLine();
+            }
+            
+                
+
+
+
+            /*Console.WriteLine("Please enter number of members");
             string membersInput = Console.ReadLine();
             int countReal;
             bool convertTrue = int.TryParse(membersInput, out countReal);
