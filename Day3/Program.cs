@@ -63,20 +63,48 @@ namespace Day3
             //bool convert = int.TryParse(input, out default_);
             */
 
-            Console.WriteLine("Uzduotis Login");
-            int = 0;
-            int countBadName = 0;
-            int countBadPass = 0;
+            Console.WriteLine("Login request received");
+            
+            int countBadName = 1;
+            int countBadPass = 1;
             string userName = "admin";
             string userPass = "admin";
-            
-            while (i<3)
+
+            string inputName = "";
+            string inputPass = "";
+            while (countBadName<=3 && inputName!=userName)
             {
-                Console.WriteLine("Please enter your username");
-                string inputName = Console.ReadLine();
+                Console.WriteLine("Please enter your username, trial " + countBadName);
+                inputName = Console.ReadLine();
+                if(inputName == userName)
+                {
+                    Console.WriteLine("Username " + userName + " found in the system");
+                    while (countBadPass <= 3 && inputPass != userPass)
+                    {
+                        Console.WriteLine("Please enter your password for " + userName + " , trial " + countBadPass);
+                        inputPass = Console.ReadLine();
+                        if(inputPass == userPass)
+                        {
+                            Console.WriteLine("Congratulations, go ahead with your account");
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            countBadPass++;
+                        }
+                    }
+                    Console.WriteLine("Too many attempts, your account is temporarily  blocked");
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    countBadName++;
+                }
             }
-            
-                
+            Console.WriteLine("Sorry, the user  was not found");
+
+
+
 
 
 
