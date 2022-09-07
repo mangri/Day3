@@ -7,10 +7,13 @@ namespace Day3
     {
         static void Main(string[] args)
         {
-            /*decimal number = 100M;
-            Console.WriteLine("All decimal places {0}", number);
-            //Neveikia Console.WriteLine("All decimal places {0:R}", number);
-            double x = 12.55;
+            double number = Math.PI/3.14;
+          
+            Console.WriteLine("Decimal places {0:0.000000}", number);
+            
+            
+            /*double x = 12.55;
+            
             int a;
             a = (int)x;
             Console.WriteLine(a);
@@ -97,7 +100,7 @@ namespace Day3
             {
                 Console.WriteLine("You can rest, " + (goodToGo - 160) + " hours on top");
             }
-            */
+           
             Console.WriteLine("What's your mark?");
             int correctMark;
             string theInput = Console.ReadLine();
@@ -127,6 +130,7 @@ namespace Day3
             {
                 Console.WriteLine("Bloga klaviatura, arba blogai ivedei");
             }
+            */
 
 
 
